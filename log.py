@@ -1,11 +1,11 @@
 import os
 import time
 
-
+from getpass import getpass
 
 def menu():
     os.system('clear')
-    print('\033[1;36;40m  v.1.0  [█ █ █ █ █ █ █ █ █ █ █ █ █ █]')   
+    print('\033[1;36;40m  v.1.1  [█ █ █ █ █ █ █ █ █ █ █ █ █ █]')   
     print("")
     
     print('\033[1;92m    786 => bismi-llāhir-raḥmānir-raḥīm')
@@ -14,7 +14,12 @@ def menu():
     print("\033[1;96m")
     x = input('\033[1;92mUsername \033[1;93m: ')
     print("")
-    e = input('\033[1;92mPassword \033[1;93m: ')
+    o = input("Are you want to show your password [ y/n ] : ")
+    print("")
+    if o=="y":
+        e = input('\033[1;92mPassword \033[1;93m: ')
+    elif o=="n":
+        e = getpass('\033[1;92mPassword \033[1;93m: ')
 
     if x=="muju" and e=="123":
         print('')
